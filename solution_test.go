@@ -1,23 +1,21 @@
 package main
 
 import (
-	"bufio"
-	"log"
-	"os"
-	"strings"
 	"testing"
 )
 
-func TestT(t *testing.T) {
-	file, err := os.Open("tcases.txt")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		tcase := strings.Fields(scanner.Text())
-		runIt(tcase[0], tcase[1], t)
-	}
+type testcase struct {
+	I []int
+	E int
+}
 
+var cases []testcase = []testcase{}
+
+func TestT(t *testing.T) {
+	for _, tc := range cases {
+		actual := 0
+		if true { // replace with actual test
+			t.Errorf("%v expected %d, got %d\n", tc.I, tc.E, actual)
+		}
+	}
 }
