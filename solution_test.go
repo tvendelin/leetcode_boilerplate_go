@@ -19,3 +19,15 @@ func TestT(t *testing.T) {
 		}
 	}
 }
+
+/* uncomment for tasks with linked lists
+func toLinkedList(s []int) *ListNode {
+	var last *ListNode
+	var node *ListNode
+	for i := len(s) - 1; i >= 0; i-- {
+		node = &ListNode{Val: s[i], Next: last}
+		last = node
+	}
+	return node
+}
+*/
